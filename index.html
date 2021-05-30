@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>☀️Weather NetWerk⛈️</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <header class="jumbotron">
+        <h1 class="display-3">Weather</h1>
+        <p class="lead">In the immortal words of Andre 3000, "Weather man, telling us it aint gonna rain"</p>
+        <p id="currentDay" class="lead"></p>
+      </header>
+
+
+    <main class="container">
+
+        <div class="row"> 
+            <!-- search "form and buttons" -->
+            <div id="search-section" class="col-12 col-md-6 col-lg-3">
+                <form id="searchForm">
+                    <h1 class="searchTitle">Enter a City name</h1>
+                    <input type="text" id="searchBar" name="search-box"/>
+                    <button type="submit" id="search-button" class="btn btn-primary btn-block">Search</button> 
+                    <button type="reset" id="dlt-btn" class="btn btn-danger btn-block">Erase</button>
+                </form>
+                <div class="search-history">
+                    <!-- where the previously searched cities will be displayed -->
+                </div>
+            </div>
+
+            <section class="results-section col-12 col-md-6 col-lg-3">
+                <div class="result">
+
+                </div>
+
+                <!-- the 5-day forecast -->
+                <section class="forecast">
+                    <div id=fiveDforecast>
+                        <div id="fiveDforecastResult">
+
+                        </div>
+                    </div>
+
+
+                </section>     
+
+            </section>
+
+
+        </div>
+    </main>  
+
+
+    <footer class="signature">
+        ❄️A Staycold Production❄️
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
+:root {
+    font-family: 'Noto Sans TC', sans-serif, 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    
+}
+
+.signature {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.jumbotron {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: #fff;
+    border-style: groove;
+    background-image: linear-gradient( #cdfdff, #fff)
+}
+
+.container {
+    text-align: left;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    /* flex-direction: column; */
+}
+
+
+/* this is the H1 in the search form */
+.searchTitle {
+
+}
+
+#searchForm {
+
+}
+
+#search-section {
+
+}
