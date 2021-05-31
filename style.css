@@ -13,6 +13,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 20px;
+    padding: 20px;
 }
 
 .jumbotron {
@@ -27,16 +29,55 @@
 }
 
 .container {
-    text-align: left;
+    /* text-align: left;
     display: flex;
     justify-content: left;
-    align-items: left;
+    align-items: left; */
     /* flex-direction: column; */
 }
 
 
 /* this is the H1 in the search form */
 .searchTitle {
+    text-decoration: underline;
+
+}
+
+#search-button {
+    background-color: aquamarine;
+    color: black;
+    box-shadow: #cdfdff;
+    font-size: 18px;
+    font-family: 'Noto Sans TC', sans-serif, 'Open Sans', sans-serif;
+}
+
+#search-button:hover{
+    cursor: pointer;
+    box-shadow:0 5px 10px 0 #4fe2c2;
+    transition: transform 150ms;
+    transform: scale(1.05);
+}
+
+#dlt-btn {
+    background-color: darkred;
+    color: #fff;
+    box-shadow: darkviolet;
+    font-size: 18px;
+    font-family: 'Noto Sans TC', sans-serif, 'Open Sans', sans-serif;
+    
+
+}
+
+#dlt-btn:hover {
+    cursor: pointer;
+    box-shadow:0 5px 10px 0 #631515;
+    transition: transform 150ms;
+    transform: scale(1.05);
+}
+
+#searchBar {
+    
+    font-size: 25px;
 
 }
 
