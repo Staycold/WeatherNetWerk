@@ -23,24 +23,25 @@
 </head>
 <body>
     <header class="jumbotron">
-        <h1 class="display-3">Weather</h1>
-        <p class="lead">In the immortal words of Andre 3000, "Weather man, telling us it aint gonna rain"</p>
+        <h1 class="display-3">This is The Weather</h1>
+        <p class="lead">In the immortal words of Andre 3000, "Weather man, tellin' us it ain't gonna rain"</p>
         <p id="currentDay" class="lead"></p>
       </header>
 
 
     <main class="container">
 
-        <div class="row"> 
+        <div class="row "> 
             <!-- search "form and buttons" -->
             <div id="search-section" class="col-12 col-md-6 col-lg-3">
-                <h1 class="searchTitle">Enter a City name</h1>
-                <form id="searchForm">
-                    
-                    <input type="text" id="searchBar" name="search-box"/>
-                    <button type="submit" id="search-button" class="btn btn-primary btn-block">Search</button> 
-                    <button type="reset" id="dlt-btn" class="btn btn-danger btn-block">Erase</button>
+                <h1 class="searchTitle"></h1>
+
+                <form id="searchForm">                    
+                    <input type="text" id="searchBar" name="search-box" placeholder="Enter a city name"/>
+                    <button type="submit" id="searchBtn" class="btn btn-primary btn-block">Search</button> 
+                    <button type="reset" id="eraseBtn" class="btn btn-danger btn-block">Erase</button>
                 </form>
+
                 <div class="search-history">
                     <!-- where the previously searched cities will be displayed -->
                 </div>
@@ -48,19 +49,26 @@
 
             <section class="results-section col-12 col-md-6 col-lg-3">
                 <div class="result">
+                    <h1>City:<p id="currentCity"></p></h1>
+
+                    <h2>Temp:<p id="currentTemp"></p></h2>
+                    <h2>Windspeed:<p id="currentWs"></p></h2>
+                    <h2>Cloud:<p id="currentClouds"></p></h2>
+                    <h3>UV Index:<p id="uvI"></p></h3>
 
                 </div>
 
-                <!-- the 5-day forecast -->
-                <section class="forecast">
-                    <div id=fiveDforecast>
+                
+                <div class="row">
+                <!------------------------------------the 5-day forecast ---------------------------------->
+                    <section class="forecast">
+                      <div id=fiveDforecast>
                         <div id="fiveDforecastResult">
 
                         </div>
-                    </div>
-
-
-                </section>     
+                      </div>
+                    </section>   
+                </div>  
 
             </section>
 
@@ -74,5 +82,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <!-- <script src="tryit.js"></script> -->
 </body>
 </html>

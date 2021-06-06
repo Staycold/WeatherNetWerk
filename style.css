@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
 
+
+
 :root {
     font-family: 'Noto Sans TC', sans-serif, 'Open Sans', sans-serif;
     font-size: 16px;
@@ -17,16 +19,25 @@
     padding: 20px;
 }
 
+.backgroundContainer {
+    /* background-image: linear-gradient( #C0D6DF, #EAEAEA, #E8DAB2, #DD6E42, #4F6D7A) */
+    /* background-image: linear-gradient(#4F6D7A,#DD6E42, #E8DAB2,#EAEAEA, #C0D6DF ) */
+}
+
 .jumbotron {
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-bottom: #fff;
-    border-style: groove;
-    background-image: linear-gradient( #cdfdff, #fff)
+    margin-bottom: 0rem;
+    /* border-bottom: #fff;
+    border-style: groove; */
+    /* background-image: linear-gradient( #cdfdff, #fff) */
+    background-image: linear-gradient( #C0D6DF, #EAEAEA, #E8DAB2, #DD6E42, #4F6D7A)
 }
+
+
 
 .container {
     /* text-align: left;
@@ -34,6 +45,8 @@
     justify-content: left;
     align-items: left; */
     /* flex-direction: column; */
+    
+    
 }
 
 
@@ -43,12 +56,17 @@
 
 }
 
+.searchDiv {
+    
+}
+
 #search-button {
     background-color: aquamarine;
     color: black;
     box-shadow: #cdfdff;
     font-size: 18px;
     font-family: 'Noto Sans TC', sans-serif, 'Open Sans', sans-serif;
+    margin-top: 1rem;
 }
 
 #search-button:hover{
@@ -86,5 +104,22 @@
 }
 
 #search-section {
+   
+
+}
+
+#bruh {
+    /* border-radius: 2rem;
+    border-color: aquamarine;
+    border-style: inset */
+    font-size: 1rem;
+}
+
+
+.div-shadow {
+    color:#C0D6DF;
+    background-color: #4F6D7A;
+    box-shadow: 0 0 .8rem  #E8DAB2;
+    margin: 2rem;
 
 }
