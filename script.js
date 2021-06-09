@@ -127,9 +127,10 @@ fetch(weatherApi)
           <h3> Temp: ${dailyTemp} °C</h3>
           <h3> Humidity:${dailyHumidity} %</h3>
           <h3> Wind Speed:${dailyWindSpeed} Km/H</h3>
-          <h3 id="uvi"> UV Index:${dailyUvi}</h3>`
+          `
 
           console.log("daily icon", dailyWeatherIcon)
+          // <h3 id="uvi"> UV Index:${dailyUvi}</h3>
 
 
 

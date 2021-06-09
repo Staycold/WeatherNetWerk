@@ -126,12 +126,20 @@
 
 .results-section {
     display: flex;
-    max-height: 10rem;
+    max-height: 5rem;
+    margin-top: 2rem;
+    justify-content: top;
+}
+
+.forecast {
+    display: flex;
+    margin-bottom: 2rem;
+    padding: 2rem;
 }
 
 #fiveDforecastResult {
     margin: 2rem;
-    padding: 1.5rem;
+    padding: 3rem;
     display: flex;
 }
 
