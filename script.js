@@ -19,7 +19,7 @@ searchBtn.addEventListener("click",function(e){
 
 
 function search(searchBar){
-
+  
   Addnew(searchBar)
   var weatherApi = "https://api.openweathermap.org/data/2.5/weather?q=" + searchBar + "&units=metric&appid=e135f1f623e7725fe85cb97874db84e4"
 
@@ -55,25 +55,30 @@ fetch(weatherApi)
       var temp = data.current.temp;
       var pressure = data.current.pressure
       var windSpeed = data.current.wind_speed;
-
+      var humidity = data.current.humidity;
+      var dataDate = data.current.dt
+      var datemom = moment.unix(dataDate).format("dddd, MMMM Do YYYY");
     
     
 
-      
+      var currentDate = document.querySelector("#date")
       var currentCity =document.querySelector("#currentCity")
       var currentTemp =document.querySelector("#currentTemp")
       var currentClouds =document.querySelector("#currentClouds")
       var currentWs =document.querySelector("#currentWs")
       var uvI =document.querySelector("#uvI")
+      var currentHumid = document.querySelector("#humidity")
+      var miniIcon = document.querySelector(".icon")
 
 
-    
-       
+       miniIcon.setAttribute("src", "https://openweathermap.org/img/w/" + weatherIcon + ".png");
+       currentDate.innerText = datemom;
        currentCity.innerText = cityName;
        currentTemp.innerText = temp;
        currentWs.innerText = windSpeed;
        currentClouds.innerText = weatherDesc;
        uvI.innerText=uvi;
+       currentHumid.innerText=humidity;
     
   
        // take the data from daily make a for loop and create a card element in that for loop
@@ -83,21 +88,85 @@ fetch(weatherApi)
        console.log("weather", data.daily[0].weather[0].description)
        console.log("icon", data.daily[0].weather[0].icon)
 
+      
+     
+
       function makeForecast() {
         var foreCast = document.querySelector("#fiveDforecastResult");
-        for(var i =0; i < data.daily[4]; i++){
+        foreCast.innerHTML="";
+        for(var i =1; i < 6; i++){
+          
           var foreDiv = document.createElement("div")
+          // var dateEl = document.createElement('h2');
+          
+
+          var cityName = searchBar;
+          var dailyUvi=data.daily[i].uvi;      
+          var weatherDesc = data["daily"][i].weather[0].description;
+          var dailyWeatherIcon = data.daily[i].weather[0].icon;
+          var dailyTemp = data.daily[i].temp.day;
+          var dailyPressure = data.daily[i].pressure
+          var dailyWindSpeed = data.daily[i].wind_speed;
+          var dailyHumidity = data.daily[i].humidity;
+          var dailyDataDate = data.daily[i].dt
+          var dailyDatemom = moment.unix(dailyDataDate).format("dddd, MMMM Do YYYY");
+
+          miniIcon.setAttribute("src", "https://openweathermap.org/img/w/" + dailyWeatherIcon + ".png");
+          // currentDate.innerText = datemom;
+          // currentCity.innerText = cityName;
+          // currentTemp.innerText = temp;
+          // currentWs.innerText = windSpeed;
+          // currentClouds.innerText = weatherDesc;
+          // uvI.innerText=uvi;
+          // currentHumid.innerText=humidity;
+
+          foreCast.appendChild(foreDiv)
+          foreDiv.innerHTML = `
+          <h2> Date: ${dailyDatemom} </h2>
+          <img src="https://openweathermap.org/img/wn/${dailyWeatherIcon}.png" /> 
+          <h3> Temp: ${dailyTemp} °C</h3>
+          <h3> Humidity:${dailyHumidity} %</h3>
+          <h3> Wind Speed:${dailyWindSpeed} Km/H</h3>
+          <h3 id="uvi"> UV Index:${dailyUvi}</h3>`
+
+          console.log("daily icon", dailyWeatherIcon)
+
+
+
+
+
+          
+          
+
+
           
         }
         
+
+        if ( uvi <= 3){
+          document.getElementById("uvi").classList.add("low")
+        }else if ( uvi > 3 && uvi < 5){
+          document.getElementById("uvi").classList.add("moderate")
+ 
+          }else if ( uvi > 5 && uvi < 7){
+            document.getElementById("uvi").classList.add("high")
+  
+          }else if ( uvi > 7 && uvi < 10){
+            document.getElementById("uvi").classList.add("very-high")
+  
+          }else if ( uvi > 10){
+            document.getElementById("uvi").classList.add("extreme")
+  
+            }
         
       }
 
-
+     
+makeForecast();
 
 })
 
-    
+
 
 
        
@@ -174,21 +243,6 @@ loadCities();
 
 
 
-
-
-function printResults(resultObj) {
-  console.log(resultObj);
-
-  var resultCard = document.createElement('div');
-  resultCard.classList.add('card', 'bg-light', 'text-dark', 'mb-3', 'p-3');
-
-  var resultBody = document.createElement('div');
-  resultBody.classList.add('card-body');
-  resultCard.append(resultBody);
-
-  var titleEl = document.createElement('h3');
-  titleEl.textContent = resultObj.title;
-}
 
 
 

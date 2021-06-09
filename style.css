@@ -45,7 +45,7 @@
     justify-content: left;
     align-items: left; */
     /* flex-direction: column; */
-    
+    height: 100vh;
     
 }
 
@@ -122,4 +122,37 @@
     box-shadow: 0 0 .8rem  #E8DAB2;
     margin: 2rem;
 
+}
+
+.results-section {
+    display: flex;
+    max-height: 10rem;
+}
+
+#fiveDforecastResult {
+    margin: 2rem;
+    padding: 1.5rem;
+    display: flex;
+}
+
+/* UV INDEX COLOURS */
+
+.high {
+    background-color: #d15005;
+}
+
+.moderate {
+    background-color: rgb(229, 250, 40);
+}
+
+.low {
+    background-color: #07e925;
+}
+
+.very-high {
+    background-color: #e61111;
+}
+
+.extreme {
+    background-color: #7f2e85;
 }

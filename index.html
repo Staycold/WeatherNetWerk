@@ -19,6 +19,10 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+  ></script>
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
@@ -49,12 +53,14 @@
 
             <section class="results-section col-12 col-md-6 col-lg-3">
                 <div class="result">
-                    <h1>City:<p id="currentCity"></p></h1>
-
-                    <h2>Temp:<p id="currentTemp"></p></h2>
-                    <h2>Windspeed:<p id="currentWs"></p></h2>
+                    <h1>Date: <h4 id="date"></h4></h1>
+                    <h1>City:<h4 id="currentCity"> </h4></h1>
+                    <img class="icon"/>
+                    <h2>Temp:<p id="currentTemp"></p>°C</h2>
+                    <h2>Windspeed:<p id="currentWs"></p>Km/h</h2>
                     <h2>Cloud:<p id="currentClouds"></p></h2>
-                    <h3>UV Index:<p id="uvI"></p></h3>
+                    <h2>Humidity: <p id="humidity"></p>%</h2>
+                    <h3 id="uvi">UV Index:<p id="uvI"></p></h3>
 
                 </div>
 
@@ -63,7 +69,7 @@
                 <!------------------------------------the 5-day forecast ---------------------------------->
                     <section class="forecast">
                       <div id=fiveDforecast>
-                        <div id="fiveDforecastResult">
+                        <div id="fiveDforecastResult" class="col-12 col-md-6 col-lg-3">
 
                         </div>
                       </div>
